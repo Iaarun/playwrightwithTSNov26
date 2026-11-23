@@ -39,7 +39,6 @@ function nestedforloop2(){
     for(let j = 1; j<=i; j++){
         pattern += "* " // * * * * 
     }
-
     console.log(pattern)
   }
 
@@ -103,4 +102,50 @@ function guessThenumber(){
     console.log("You guessed the correct number")
 }
 
-guessThenumber()
+function dowhile(){
+    let i=1
+    do{
+        console.log("Hello World!!");
+        i++;
+    }while(i>=5)
+}
+
+// for ...of and for ...in
+
+function forinloop(){
+    let num = "svkjhfkdv"
+     const user = {
+        name:'Arun',
+        age:'35',
+        city:'Bengaluru'
+     }
+     for(let key in user){
+      //  console.log(key +":"+user[key])
+      console.log(`${key} : ${user[key]}`)
+     }
+}
+
+function forofloop(){
+    const user = {
+        name:'Arun',
+        age:'35',
+        city:'Bengaluru'
+     }
+     for(let [key, value] of Object.entries(user)){
+      //  console.log(key +":"+user[key])
+      console.log(`${key} : ${value}`)
+     }
+}
+
+function foreachloop(){
+   const user = {
+        name:'Arun',
+        age:'35',
+        city:'Bengaluru'
+     }
+     Object.entries(user).forEach(([key, value])=>{
+        console.log(`${key} : ${value}`)
+     }) 
+}
+
+foreachloop()

@@ -69,6 +69,9 @@ function switchcase(){
   //  let userrole = prompt("Enter your role (admin, dev, qa, guest) ")
   let userrole = 'qa'
     switch (userrole.trim()) {
+        default:
+            console.log("Access Denied.")
+            break;
         case 'admin':
             console.log("Full Access")
             break;
@@ -81,9 +84,7 @@ function switchcase(){
         case 'guest':
             console.log("Guest access, Read only")  
             break;
-        default:
-            console.log("Access Denied.")
-            break;
+       
     }
 
 }
