@@ -67,8 +67,67 @@ function arraysearch(){
     //indexOf()
    // console.log(num2.indexOf(94))
     console.log(num2.lastIndexOf(94))
-    console.log(num2.lastIndexOf(94,4))
+    console.log(num2.lastIndexOf(94,4)) // search in the backward direction , starting from the specifed index
+   //include(): return boolean
+   console.log(num2.includes(131))
+  
 }
 
+function arraySorting(){
+    // let num2 = new Array(15,105,34,94,8,41,32)
+    let num2=[15,105,34,94,8,41,32]
+    console.log(`original array is: ${num2}`)
+    // need to implement the comparison fucntion as sort function convertsnumber element to string
+    //sort() modifies the origial array
+    num2.sort((a,b)=> a-b) // numeric sort
+    console.log(num2)
+    // inreverse order
+    num2.sort((a,b)=> b-a)
+    console.log(num2)
 
-arraysearch()
+    
+    
+    //tosorted()
+   let num3=[15,105,34,94,8,41,32]
+   let sortedarray=  num3.toSorted((a,b)=>a-b)
+    console.log(num3)
+    console.log(sortedarray)
+
+    let fruits = ["Banana","Apple","Oranges","kiwi","Guava"]
+    fruits.sort()
+    console.log(`sorted fruits array ${fruits}`)
+    fruits.reverse()
+    console.log(`reverse sorted fruits array ${fruits}`)
+
+    let fruits1 = ["Banana","Apple","Oranges","kiwi","Guava"]
+    let reversefruits= fruits1.toReversed()
+    console.log(fruits1)
+    console.log(reversefruits)
+
+    // impliment the reverse function in number array
+    // sort the fruits array in reverse order
+    // sort the array in random order
+
+}
+function combinearrays(){
+    let num1 = [10,20,30]
+    let num2 = [50,60,70]
+
+    // using concat function
+    let combinedarray = num1.concat(num2)
+    console.log(combinedarray)
+    // using spread operator
+    let botharray = [...num1, ...num2]
+    console.log(botharray)
+}
+ 
+function iterateoverarrays(){
+    let cars = ["BMW","Audi","BYD","Volvo"]
+    console.log("Normal for loop")
+
+    for(let i=0; i<cars.length; i++){
+          console.log(cars[i])
+    }
+    // iterate overs ccars array using normal while loop
+}
+iterateoverarrays()
