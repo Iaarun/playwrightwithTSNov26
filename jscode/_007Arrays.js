@@ -124,10 +124,68 @@ function combinearrays(){
 function iterateoverarrays(){
     let cars = ["BMW","Audi","BYD","Volvo"]
     console.log("Normal for loop")
-
+   // normal for loop works on indexes
     for(let i=0; i<cars.length; i++){
           console.log(cars[i])
     }
     // iterate overs ccars array using normal while loop
+
+    console.log("=====While loop=====")
+    let i=0;
+    while(i<cars.length){
+        console.log(cars[i])
+        i++;
+    }
+    console.log("=====for ..of=====")
+    // for.of works on the array elements
+    for(let car of cars){
+        console.log(car)
+    }
+
+    console.log("=====for in =====")
+    // for ..in loop works to array index
+    for(let car in cars){
+        console.log(`${car}=> ${cars[car]}`)
+    }
+    
+    console.log("=====for each =====")
+    // in foreach loop it works on each element of array. index is the optional parameter
+    cars.forEach((car, index) =>{
+        console.log(`${index} => ${car}`)
+    })
 }
-iterateoverarrays()
+
+function arrayfunctions(){
+    //map filter and reduce
+    let numbers= [12,24,35,67,24,18,37,95]
+     // print all event numbers from array
+    for(let i=0; i<numbers.length; i++){
+        if(numbers[i]%2==0){
+            console.log(numbers[i])
+        }
+    }
+   
+    console.log("-----using map function --------")
+    numbers.map(num=>{
+        if(num%2==0){
+            console.log(num)
+        }
+    })
+
+    let cars = ['bmw','toyota','byd','hyundai','maruti']
+    let car1=  cars.map(car=>car.toUpperCase())
+    console.log(car1)
+
+    console.log("-----using filter function --------")
+    numbers.filter(num=>{
+        if(num%2 !=0){
+            console.log(num)
+        }
+    })
+
+   let arr= [-1,5,3,-5,5] // program to calculate the square of positive number
+   let words =['lion','tiger','elephant','fox','giraffe']
+   // convert the words with more tha 4 letter , into uppercase 
+
+}
+arrayfunctions()
