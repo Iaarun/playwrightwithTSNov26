@@ -14,7 +14,23 @@ function maxvalue(){
             maxnum=arr[i]
         }
     }
-
     console.log(`Max number is ${maxnum}`)
 }
-maxvalue()
+
+function secondmax(){
+    let arr = [45,34,87,15,34,29,54,34]
+    let max = -Infinity
+    let secondMax = -Infinity
+    for(let num of arr){
+
+        if(num>max){
+            secondMax=max
+            max=num
+        }
+        else if(num > secondMax && num !== max){
+            secondMax = num
+    }
+}
+ console.log(`Second max num is ${secondMax}`)
+}
+secondmax()
